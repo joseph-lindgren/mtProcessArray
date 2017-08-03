@@ -222,7 +222,7 @@ int main(int argc, char **argv)
 		using namespace mt;
 		using namespace std;
 
-		ThreadGroup * mythreads = new ThreadGroup();
+		ThreadGroup * mythreads = new ThreadGroup(); /// <- source of the current compiler error
 	}
 	int rc = 0;
 	int n = 0;
