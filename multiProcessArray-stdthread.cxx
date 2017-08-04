@@ -54,6 +54,7 @@
 #define	MAX_SIDE_LEN	1024
 #define	MAX_VIEWABLE	80
 
+//// BEGIN TEMPLATE CLASS Array2d =======================================
 
 template<class T>
 class Array2d 
@@ -154,7 +155,9 @@ void Array2d<T>::EntrywiseOpImport(Array2d<T> & src, T op(T,T), size_t startRow,
 	}
 }
 
-////////////////////////////////////////////////////////////////////////
+//// END TEMPLATE CLASS Array2d =========================================
+
+//// BEGIN PROBLEM-SPECIFIC FUNCTIONS ===================================
 
 Array2d<bool> processValues(Array2d<float> & input)
 /* "This function takes in as input a 2D float array and provides as
@@ -173,26 +176,28 @@ Array2d<bool> processValues(Array2d<float> & input)
 }
 
 bool blend(bool src, bool dest)
-{
+{	/// Logical OR function
 	return src or dest;
 }
 
 bool copy(bool src, bool dest)
-{
+{	/// Direct copy function
 	return src;
 }
 
 inline float myRandom( float in )
-{
+{	/// Weird throwaway function to randomize array values via SetAllVals
 	return ( rand() % (4 + int(in) % 8) ) / 2;
 }
 
+/// "Runnable" data
 typedef struct {
 	Array2d<float> arrayIn;
 	Array2d<bool> arrayOut;
 	size_t rowOffset;
 } TData;
 
+/// "Runnable" process
 void * computeLeaf( void * args )
 {
 	TData * leaf = (TData *)args;
@@ -200,7 +205,7 @@ void * computeLeaf( void * args )
 	return 0;
 }
 
-////////////////////////////////////////////////////////////////////////
+//// MAIN IS HERE ======================================================
 
 int main(int argc, char **argv)
 {
