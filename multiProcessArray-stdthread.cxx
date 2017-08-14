@@ -1,9 +1,9 @@
 /*
- * multiProcessArray-2.cxx
+ * multiProcessArray-stdthread.cxx
  * 
  * Copyright 2017 Joseph <joseph<dot>lindgren<at>aol<dot>com>
  * 
- * sys-c++ is free software; you can redistribute it and/or modify
+ * multiProcessArray-stdthread is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 3 of the License, or
  * (at your option) any later version.
