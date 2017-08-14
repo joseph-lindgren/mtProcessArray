@@ -8,6 +8,6 @@ Try to make the code cross-platform and make use of multiple threads and ensure 
 ========================================================================
 
 Problem solution:
-Currently implemented with Posix threads, port to coda-oss (https://github.com/mdaus/coda-oss) multi-threading in progress.
+Currently implemented with std::thread, port to coda-oss (https://github.com/mdaus/coda-oss) multi-threading should be easy.
 
 Array2d<bool> processValues(Array2d<float> & input) is a dummy function standing in for whatever the real thing will do (probably feature detection or filtering)
